@@ -1,0 +1,7 @@
+///Crear backup de la bd en el directorio actual
+    pg_dump -h localhost -U postgres 'BD' > 'nombreArchivo'.sql
+//Restaurar bd en el directorio del archivo backup
+    cat 'nombreArchivo'.sql | psql 'BD'
+
+    
+

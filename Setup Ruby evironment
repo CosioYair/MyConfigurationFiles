@@ -1,0 +1,40 @@
+///////////////////////VIM///////////////////////
+
+- Install VIM
+    * git clone https://github.com/vim/vim.git
+    * cd vim/src
+    * make
+    * sudo apt-get install vim
+
+- Docfiles 
+    * git clone git://github.com/TheNaoX/dotfiles.git ~/.dotfiles
+    * cd ~/.dotfiles
+    * ./install.sh
+
+-Plugins
+    * cd .dotfiles/bundle 
+        Descargar de vimaswome el repositorio del plugin en ese directorio
+    * vim .dotfiles/vim-for-rails.vim
+        Anadir la linea del plugin a instalar
+    * :source %
+    * :PluginInstall
+///////////////////////VIM///////////////////////
+
+///////////////////////RVM///////////////////////
+
+    * sudo apt-get update
+    * sudo apt-get install curl
+    * curl -L https://get.rvm.io | bash -s stable
+    * curl -L get.rvm.io >rvm-installer
+    * less rvm-installer
+    * bash rvm-installer
+    * source $HOME/.rvm/scripts/rvm
+    * rvm autolibs packages
+    * rvm install 2.2.2
+///////////////////////RVM///////////////////////
+
+TangoDashboard : http://git.tangosource.com/tango-dashboard/project-dashboard 
+    User : ycosio
+    Password : BARC...
+
+

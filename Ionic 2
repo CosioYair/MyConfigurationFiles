@@ -1,0 +1,8 @@
+https://www.youtube.com/watch?v=sm3i_8iEtyY&list=PLa8OODhatbXa5DtBZz5dGhvKkt2zPHg01#t=395.920695
+
+
+- Instalar node
+- Instalar ionic cordova globalmene
+    npm install -g ionic cordova
+- Nuevo proyecto
+    ionic start 'nombreApp' blank

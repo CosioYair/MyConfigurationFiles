@@ -1,0 +1,23 @@
+class RemainingWork < ActiveRecord::Base
+  include RemainingWorkActions
+  belongs_to :sprint_story
+  has_one :sprint, through: :sprint_story
+
+  scope :date, ->(date) { where(date:date) }
+  scope :sprint_stories, ->(sprint_stories) { where(sprint_story: sprint_stories).includes(sprint_story: :story) }
+  scope :points_regular_work_by_date, -> do
+    joins(:sprint_story).
+      where('sprint_stories.oos_date IS NULL').
+      order(:date).
+      group(:date).
+      sum(:points)
+  end
+  scope :points_add_work_by_date, -> do
+    joins(:sprint_story).
+      where('sprint_stories.oos_date IS NOT NULL').
+      order(:date).
+      group(:date).
+      sum(:points)
+  end
+
+end
